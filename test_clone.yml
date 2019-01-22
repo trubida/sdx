@@ -8,9 +8,9 @@
   # Create a VM from a template
   - name: create the VM
   vmware_guest:
-  host: '{{ "VMWARE_HOST" }}'
-  username: '{{ "VMWARE_USER" }}'
-  password: '{{ "VMWARE_PASSWORD" }}'
+  host: '{{ "vmware_hostname" }}'
+  username: '{{ "vmware_user" }}'
+  password: '{{ "vmware_pass" }}'
       validate_certs: no
       datacenter: 'siriussdx'
       folder: ansible
