@@ -3,7 +3,7 @@
   gather_facts: false
   connection: local
   vars_prompt:
-    - name: "vm_name"
+  - name: "vm_name"
       prompt: "Virtual Machine Name"
       private: no
     - name: "ip_address"
@@ -13,11 +13,11 @@
   # get date
   - set_fact: creationdate="{{lookup('pipe','date "+%Y/%m/%d %H:%M"')}}"
   # Create a VM from a template
-    - name: create the VM
-    vmware_guest:
-    host: '{{ lookup("env", "VMWARE_HOST") }}'
-    username: '{{ lookup("env", "VMWARE_USER") }}'
-    password: '{{ lookup("env", "VMWARE_PASSWORD") }}'
+  - name: create the VM
+  vmware_guest:
+  host: '{{ "VMWARE_HOST" }}'
+  username: '{{ "VMWARE_USER" }}'
+  password: '{{ "VMWARE_PASSWORD" }}'
       validate_certs: no
       datacenter: 'siriussdx'
       folder: ansible
