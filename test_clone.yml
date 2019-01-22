@@ -2,6 +2,14 @@
 - hosts: localhost
   gather_facts: false
   connection: local
+    vars_prompt:
+    - name: "vm_name"
+      prompt: "Virtual Machine Name"
+      private: no
+    - name: "ip_address"
+      prompt: "IP Address on 251 VLAN"
+      private: no
+
   tasks:
   # get date
   - set_fact: creationdate="{{lookup('pipe','date "+%Y/%m/%d %H:%M"')}}"
