@@ -15,7 +15,7 @@
       state: poweredon
       guest_id: centos7_64Guest
       disk:
-      - size_gb: 60
+      - size_gb: 80
         type: thin
         datastore: mgmt_ds_01
       networks:
