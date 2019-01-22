@@ -36,4 +36,3 @@
         domain : mgmt.siriussdx.com
         hostname: '{{ vm_name }}'
       template: centos_template
-    run_once: true
