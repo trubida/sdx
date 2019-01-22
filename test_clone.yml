@@ -2,13 +2,6 @@
 - hosts: localhost
   gather_facts: false
   connection: local
-  vars_prompt:
-  - name: "vm_name"
-      prompt: "Virtual Machine Name"
-      private: no
-    - name: "ip_address"
-      prompt: "IP Address on 251 VLAN"
-      private: no
   tasks:
   # get date
   - set_fact: creationdate="{{lookup('pipe','date "+%Y/%m/%d %H:%M"')}}"
@@ -21,17 +14,16 @@
       validate_certs: no
       datacenter: 'siriussdx'
       folder: ansible
-      name: '{{ vm_name }}'
+      name: test1234
       state: poweredon
       guest_id: centos7_64Guest
-      annotation: "{{ notes }} - {{ creationdate }}"
       disk:
       - size_gb: 60
         type: thin
         datastore: mgmt_ds_01
       networks:
       - name: LAG-VLAN251
-        ip: '{{ ip_address }}'
+        ip: 10.251.0.38
         netmask: 255.255.255.0
         gateway: 10.251.0.1
         dns_servers:
@@ -45,7 +37,7 @@
         - 10.250.0.100
         - 10.250.0.101
         domain : mgmt.siriussdx.com
-        hostname: test-test
+        hostname: test1234
       template: centos_template
       wait_for_ip_address: yes
     run_once: true
