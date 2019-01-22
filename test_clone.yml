@@ -36,5 +36,4 @@
         domain : mgmt.siriussdx.com
         hostname: '{{ vm_name }}'
       template: centos_template
-    wait_for_ip_address: yes
     run_once: true
