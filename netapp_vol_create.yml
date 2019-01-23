@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   vars:
-    username: admin
-    password: netapp1234
+      username: "{{ username }}"
+      password: "{{ password }}"
   name: Volume Action
   tasks:
   - name: Volume Create
