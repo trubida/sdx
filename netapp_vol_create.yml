@@ -1,8 +1,5 @@
 ---
 - hosts: localhost
-  vars:
-      username: "{{ username }}"
-      password: "{{ password }}"
   name: Volume Action
   tasks:
   - name: Volume Create
