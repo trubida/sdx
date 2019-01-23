@@ -13,7 +13,5 @@
       policy: default
       junction_path: /testansible
       hostname: 10.251.0.22
-      username: admin
-      password: netapp1234
       https: true
       validate_certs: false
