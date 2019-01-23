@@ -1,0 +1,11 @@
+- name: Create FlexVol
+  na_ontap_volume:
+    state: present
+    name: testansible
+    is_infinite: False
+    aggregate_name: aggr1_a770_2
+    size: 20
+    size_unit: mb
+    junction_path: /ansibleVolume11
+    vserver: mgmt
+    hostname: 10.251.0.22
