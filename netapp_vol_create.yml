@@ -1,4 +1,8 @@
 ---
+- hosts: localhost
+  gather_facts: false
+  connection: local
+  tasks:
 - name: Create FlexVol
   na_ontap_volume:
     state: present
