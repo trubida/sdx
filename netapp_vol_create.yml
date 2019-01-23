@@ -4,8 +4,8 @@
     name: testansible
     is_infinite: False
     aggregate_name: aggr1_a770_2
-    size: 20
-    size_unit: mb
+    size: 2
+    size_unit: gb
     junction_path: /ansibleVolume11
     vserver: mgmt
     hostname: 10.251.0.22
