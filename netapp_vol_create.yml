@@ -1,6 +1,5 @@
 ---
   vars:
-    hostname: 172.32.0.182
     username: "{{ username }}"
     password: "{{ password }}"
 - hosts: localhost
