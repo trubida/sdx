@@ -1,16 +1,17 @@
 ---
 - hosts: localhost
-  gather_facts: false
-  connection: local
+  name: Volume Action
   tasks:
-- name: Create FlexVol
-  na_ontap_volume:
-    state: present
-    name: testansible
-    is_infinite: False
-    aggregate_name: aggr1_a770_2
-    size: 2
-    size_unit: gb
-    junction_path: /ansibleVolume11
-    vserver: mgmt
-    hostname: 10.251.0.22
+  - name: Volume Create
+    na_ontap_volume:
+      state: present
+      name: testansible
+      vserver: mgmt
+      aggregate_name: aggr1_a700_01
+      size: 10
+      size_unit: gb
+      policy: default
+      junction_path: /testansible
+      hostname: 10.251.0.22
+      https: true
+      validate_certs: false
