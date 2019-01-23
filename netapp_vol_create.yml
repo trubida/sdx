@@ -7,7 +7,7 @@
       state: present
       name: testansible
       vserver: mgmt
-      aggregate_name: aggr1_aff700_01
+      aggregate_name: aggr1_aff700_1
       size: 10
       size_unit: gb
       policy: default
