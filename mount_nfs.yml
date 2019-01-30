@@ -1,0 +1,9 @@
+---
+- hosts: '{{ host_ip }}'
+  remote_user: root
+
+  tasks:
+    - name: Create mountable dir
+      file: path=/nfs state=directory mode=777 owner=root group=root
+    - name: set mountpoints
+      mount: name=/nfs src=10.252.0.70:/testansible fstype=nfs state=mounted
