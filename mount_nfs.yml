@@ -1,6 +1,5 @@
 ---
 - hosts: '{{ host_name }}'
-  remote_user: root
 
   tasks:
     - name: Create mountable dir
