@@ -5,15 +5,15 @@
   - name: Volume Create
     na_ontap_volume:
       state: present
-      name: testansible
+      name: '{{ vol_name }}
       vserver: mgmt
       aggregate_name: aggr1_aff700_1
       size: 10
       size_unit: gb
       policy: default
-      junction_path: /testansible
+      junction_path: /'{{ vol_name }}
       hostname: 10.251.0.22
-      username: admin
-      password: netapp1234
+      username: "{{ ansible_env.ANSIBLE_NET_USERNAME }}"
+      password: "{{ ansible_env.ANSIBLE_NET_PASSWORD }}"
       https: true
       validate_certs: false
