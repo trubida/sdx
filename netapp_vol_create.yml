@@ -11,7 +11,7 @@
       size: 10
       size_unit: gb
       policy: default
-      junction_path: /"{{ vol_name }}"
+      junction_path: /{{ vol_name }}
       hostname: 10.251.0.22
       username: "{{ ansible_env.ANSIBLE_NET_USERNAME }}"
       password: "{{ ansible_env.ANSIBLE_NET_PASSWORD }}"
