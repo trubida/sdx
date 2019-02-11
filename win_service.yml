@@ -1,5 +1,5 @@
 - name: start a service
   host: windows
   win_service:
-    name: spooler
+    name: wuauserv
     state: started
