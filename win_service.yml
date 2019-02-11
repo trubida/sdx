@@ -1,0 +1,5 @@
+- name: start a service
+  host: windows
+  win_service:
+    name: spooler
+    state: started
