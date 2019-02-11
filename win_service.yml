@@ -1,5 +1,8 @@
+---
 - name: start a service
-  host: windows
+  hosts: windows
+tasks:
+  - name: Verify windows updates are enabled
   win_service:
     name: wuauserv
     state: started
