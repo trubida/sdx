@@ -1,7 +1,9 @@
 ---
-- hosts: windows
-# Ensure Windows Update is Running
-    - name: Ensure Windows Update is Running
-      win_service:
-        name: W32Time
-        state: started
+  - name: Windows Updates
+  hosts: windows
+  gather_facts: false
+  tasks:
+    - name: Service Check
+    win_service:
+    name: wuauserv
+    state: started
