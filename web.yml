@@ -1,8 +1,8 @@
 ---
-  hosts: windows
-  gather_facts: false
+- name: test cmd from win_command module
+  hosts: test-windows-2016
   tasks:
-  - name: Start Windows Update Service 
-    win_service:
-       name: spooler
-       state: started
+    - name: run netstat and return Ethernet stats 
+      win_service:
+      name: spooler
+      state: started
