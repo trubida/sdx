@@ -1,6 +1,4 @@
----
-- hosts: windows
-    - name: Ensuring WinUpdate is started
-      win_service:
-        name: wuauserv
-        state: started
+- name: Restart a service
+  win_service:
+    name: spooler
+    state: restarted
