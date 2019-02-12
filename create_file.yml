@@ -4,5 +4,5 @@
   tasks:
     - name: Create file 
       win_file: 
-        path: "c:\temp\demo.txt"
+        path: c:\temp\demo.txt
         state: "touch"
