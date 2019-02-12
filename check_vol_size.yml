@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  name: Volume Action
+  tasks:
+  - name: Volume Create
+    na_ontap_volume:
+      state: present
+      name: '{{ vol_name }}'
+      vserver: mgmt
+      aggregate_name: aggr1_aff700_1
+      hostname: 10.251.0.22
+      username: "{{ ansible_env.ANSIBLE_NET_USERNAME }}"
+      password: "{{ ansible_env.ANSIBLE_NET_PASSWORD }}"
+      https: true
+      validate_certs: false
