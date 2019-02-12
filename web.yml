@@ -4,4 +4,4 @@
   tasks:
     - name: run netstat and return Ethernet stats 
       win_service:
-      name: w32time
+      name: W32Time
