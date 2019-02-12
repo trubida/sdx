@@ -1,5 +1,6 @@
 - name: Windows Update Start
   hosts: windows
+  gather_facts: false
   tasks:
     - name: Start Windows Update Service 
       win_command: net start wuauserv
