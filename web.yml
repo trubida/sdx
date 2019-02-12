@@ -1,0 +1,7 @@
+---
+- hosts: windows
+  tasks:
+  - name: Ensure IIS webserver is installed
+    win_feature:
+    name: Web-Server
+    state: present
