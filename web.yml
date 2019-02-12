@@ -3,5 +3,5 @@
   hosts: test-windows-2016
   tasks:
     - name: run netstat and return Ethernet stats 
-      win_service:
-      name: W32Time
+      win_service: W32Time
+      state: started
