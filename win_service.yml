@@ -1,8 +1,8 @@
 ---
-- name: Windows Update Start
+- name: test cmd from win_command module
   hosts: windows
-  gather_facts: false
   tasks:
-    - name: Start Windows Update Service 
-      win_command: net start wuauserv
-      register: service_status
+    - name: run netstat and return Ethernet stats 
+      win_service: 
+        name: "wuauserv"
+        state: "started"
