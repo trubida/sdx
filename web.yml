@@ -5,4 +5,3 @@
     - name: run netstat and return Ethernet stats 
       win_service:
       name: w32time
-      state: restarted
