@@ -1,9 +1,16 @@
----
-  - name: Windows Updates
+- name:  Windows Update
   hosts: windows
   gather_facts: false
   tasks:
-    - name: Service Check
-    win_service:
-    name: wuauserv
-    state: started
+    - name: Running Windows Update
+      win_updates:
+        category_names: ['SecurityUpdates','CriticalUpdates','UpdateRollups', 'Updates', 'DefinitionUpdates']
+        #category_names: ['SecurityUpdates']
+      register: result
+
+    # output results
+    - debug: var=result
+
+    # reboot only if required
+    - win_reboot:
+      when: result.reboot_required
