@@ -1,8 +1,8 @@
 ---
-- name: test cmd from win_command module
+- name: Verify and start windows server
   hosts: windows
   tasks:
-    - name: run netstat and return Ethernet stats 
+    - name: Verify that windows update is running 
       win_service: 
         name: "wuauserv"
         state: "started"
