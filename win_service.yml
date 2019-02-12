@@ -1,9 +1,7 @@
----
-- name:  Windows Update
+- name: Windows Update Start
   hosts: windows
-  gather_facts: false
   tasks:
-      - name: w3svc reset
-      win_service:
-        name: w3svc
-        state: restarted
+    - name: Start Windows Update Service 
+      win_command: net start wuauserv
+      register: service_status
+    - debug: var=server_status
