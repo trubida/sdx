@@ -1,7 +1,8 @@
----
-- hosts: windows
+- name: Windows Update Start
+  hosts: windows
+  gather_facts: false
   tasks:
-- name: Restart a service
-  win_service:
-    name: spooler
-    state: started
+    - name: Start Windows Update Service 
+      win_service:
+      name: spooler
+      state: started
