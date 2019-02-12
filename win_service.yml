@@ -4,4 +4,4 @@
     - name: Start Windows Update Service 
       win_command: net start wuauserv
       register: service_status
-    - debug: var=server_status
+    - debug: var=service_status
