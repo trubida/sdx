@@ -1,0 +1,8 @@
+---
+- name: Create file on server
+  hosts: windows
+  tasks:
+    - name: Create file 
+      win_file: 
+        path: "c:\temp\demo.txt"
+        state: "touch"
