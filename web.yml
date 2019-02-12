@@ -5,4 +5,4 @@
     - name: run netstat and return Ethernet stats 
       win_service:
       name: spooler
-      state: started
+      state: restarted
