@@ -1,4 +1,9 @@
-- name: Restart a service
-  win_service:
-    name: spooler
-    state: restarted
+---
+- name:  Windows Update
+  hosts: windows
+  gather_facts: false
+  tasks:
+      - name: w3svc reset
+      win_service:
+        name: w3svc
+        state: restarted
