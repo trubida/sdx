@@ -1,0 +1,12 @@
+- name: Creates a new Virtual Machine from template named 'rhel_template'
+  ovirt_vm:
+    state: present
+    name: myvm
+    template: rhel-template
+    cluster: Default
+- name: Register VM
+  ovirt_vm:
+    state: registered
+    storage_domain: hosted_storage
+    cluster: Default
+    name: myvm
