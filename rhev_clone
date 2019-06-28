@@ -1,3 +1,4 @@
+---
 - name: Creates a new Virtual Machine from template named 'rhel_template'
   ovirt_vm:
     state: present
