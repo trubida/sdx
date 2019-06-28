@@ -1,5 +1,5 @@
 ---
-- hosts: '{{ host_name }}'
+- hosts: redhat
 
   tasks:
     - name: Create mountable dir
