@@ -8,6 +8,7 @@
   # Create a VM from a template
   - name: create the VM
     vmware_guest:
+      hostname: 'lab-vcenter'
       validate_certs: no
       datacenter: 'LAB-DC'
       folder: ansible
@@ -34,7 +35,6 @@
         - 10.240.4.100
         - 10.240.4.101
         domain : lab.mgmt.siriussdx.com
-        hostname: 'lab-vcenter'
       template: centos_template
       wait_for_ip_address: yes
     run_once: true
