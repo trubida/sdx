@@ -9,7 +9,7 @@
   - name: create the VM
     vmware_guest:
       validate_certs: no
-      datacenter: 'siriussdx'
+      datacenter: 'LAB-DC'
       folder: ansible
       name: '{{ vm_name }}'
       state: poweredon
@@ -17,23 +17,23 @@
       disk:
       - size_gb: 80
         type: thin
-        datastore: mgmt_ds_01
+        datastore: lab-ds-01
       networks:
-      - name: LAG-VLAN251
+      - name: VLAN_2404
         ip: '{{ ip_address }}'
-        netmask: 255.255.255.0
-        gateway: 10.251.0.1
+        netmask: 255.255.252.0
+        gateway: 10.240.4.1
         dns_servers:
-        - 10.250.0.100
-        - 10.250.0.101
+        - 10.240.4.100
+        - 10.240.4.101
       hardware:
         memory_mb: 4096
         num_cpus: 2
       customization:
         dns_servers:
-        - 10.250.0.100
-        - 10.250.0.101
-        domain : mgmt.siriussdx.com
+        - 10.240.4.100
+        - 10.240.4.101
+        domain : lab.mgmt.siriussdx.com
         hostname: '{{ vm_name }}'
       template: centos_template
       wait_for_ip_address: yes
