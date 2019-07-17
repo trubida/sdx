@@ -3,6 +3,6 @@
 
   tasks:
     - name: Create mountable dir
-      file: path=/nfs state=directory mode=777 owner=root group=root
+      file: path=/mnt/nfs state=directory mode=777 owner=root group=root
     - name: set mountpoints
       mount: name=/mnt/nfs src=10.240.6.65:/rhev_iso fstype=nfs state=mounted
