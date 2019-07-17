@@ -1,5 +1,5 @@
 ---
-- hosts: '{{ ip_address }}'
+- hosts: '{{ vm_name }}'
 
   tasks:
     - name: Create mountable dir
