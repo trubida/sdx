@@ -10,6 +10,7 @@
          group: webserver
          instance_type: t2.micro
          image: ami-087c2c50437d0b80d
+         region: us-east-2
          wait: yes
          exact_count: 1
          count_tag:
