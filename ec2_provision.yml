@@ -1,14 +1,13 @@
 ---
 - hosts: localhost
   gather_facts: False
-
-  tasks:
-  - name: create the VM
+ tasks:
+  - name: Provision an EC2 instance
     ec2:
-    key_name: default
-    instance_type: t2.micro
-    image: ami-087c2c50437d0b80d
-    wait: yes
-    group: webserver
-    count: 3
-    assign_public_ip: yes
+      key_name: default
+      instance_type: t2.micro
+      image: ami-087c2c50437d0b80d
+      wait: yes
+      group: webserver
+      count: 1
+      assign_public_ip: yes
