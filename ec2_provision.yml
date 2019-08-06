@@ -7,7 +7,7 @@
     - name: Provision an instance
       ec2:
          key_name: default
-         group: webserver
+         group: default
          instance_type: t2.micro
          image: ami-087c2c50437d0b80d
          region: us-east-2
