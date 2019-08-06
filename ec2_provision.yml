@@ -1,5 +1,4 @@
 ---
-- hosts: localhost
   - name: create the VM
     ec2:
     key_name: default
