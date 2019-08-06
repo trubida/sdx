@@ -1,13 +1,19 @@
 ---
 - hosts: localhost
   gather_facts: False
- tasks:
-  - name: Provision an EC2 instance
-    ec2:
-      key_name: default
-      instance_type: t2.micro
-      image: ami-087c2c50437d0b80d
-      wait: yes
-      group: webserver
-      count: 1
-      assign_public_ip: yes
+
+  tasks:
+
+    - name: Provision an instance
+      ec2:
+         key_name: default
+         group: webserver
+         instance_type: t2.micro
+         image: ami-087c2c50437d0b80d
+         wait: yes
+         exact_count: 1
+         count_tag:
+            Name: Demo
+         instance_tags:
+            Name: Demo
+      register: ec2
