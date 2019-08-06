@@ -6,7 +6,7 @@
 
     - name: Provision an instance
       ec2:
-         key_name: default
+         key_name: SDXic-mgmt
          group: default
          instance_type: t2.micro
          image: ami-0520e698dd500b1d1
