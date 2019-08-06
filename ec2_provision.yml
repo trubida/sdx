@@ -1,40 +1,11 @@
 ---
 - hosts: localhost
-  gather_facts: false
-  connection: local
-  tasks:
-  # get date
-  - set_fact: creationdate="{{lookup('pipe','date "+%Y/%m/%d %H:%M"')}}"
-  # Create a VM from a template
   - name: create the VM
-    vmware_guest:
-      hostname: 'lab-vcenter'
-      validate_certs: no
-      datacenter: 'LAB-DC'
-      folder: ansible
-      name: '{{ vm_name }}'
-      state: poweredon
-      guest_id: centos7_64Guest
-      disk:
-      - size_gb: 80
-        type: thin
-        datastore: lab-ds-01
-      networks:
-      - name: VLAN_2404
-        ip: '{{ ip_address }}'
-        netmask: 255.255.252.0
-        gateway: 10.240.4.1
-        dns_servers:
-        - 10.240.4.100
-        - 10.240.4.101
-      hardware:
-        memory_mb: 4096
-        num_cpus: 2
-      customization:
-        dns_servers:
-        - 10.240.4.100
-        - 10.240.4.101
-        domain : lab.mgmt.siriussdx.com
-      template: centos_template
-      wait_for_ip_address: yes
-    run_once: true
+    ec2:
+    key_name: default
+    instance_type: t2.micro
+    image: ami-087c2c50437d0b80d
+    wait: yes
+    group: webserver
+    count: 3
+    assign_public_ip: yes
