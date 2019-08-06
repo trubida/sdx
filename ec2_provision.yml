@@ -1,10 +1,9 @@
 ---
 - ec2:
-    key_name: mykey
+    key_name: default
     instance_type: t2.micro
-    image: ami-123456
+    image: ami-087c2c50437d0b80d
     wait: yes
     group: webserver
     count: 3
-    vpc_subnet_id: subnet-29e63245
     assign_public_ip: yes
