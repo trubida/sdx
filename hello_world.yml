@@ -1,6 +1,6 @@
 ---
 - name: Copy hello world file
-  hosts: tag_Name_Demo
+  hosts: localhost
   gather_facts: no
   sudo: yes
   tasks:
