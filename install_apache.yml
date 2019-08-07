@@ -5,7 +5,7 @@
   tasks:
   - name: Install apache packages 
     yum:
-      name: httpd
+      name: install httpd
       state: present
   - name: ensure httpd is running
     service:
