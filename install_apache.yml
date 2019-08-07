@@ -4,8 +4,9 @@
   sudo: yes
   tasks:
   - name: Install apache packages 
-    yum: pkg=httpd state=latest
-      state: present
+    yum:
+      name: httpd
+      state: latest
   - name: ensure httpd is running
     service:
       name: httpd 
