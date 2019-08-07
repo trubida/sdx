@@ -14,5 +14,5 @@
       name: httpd 
       state: started
   - name: Run command to copy index.html
-      command: '"curl -O https://s3.amazonaws.com/www.siriuscoffeecompany.com/index.html"'
+      command: curl "{{-O https://s3.amazonaws.com/www.siriuscoffeecompany.com/index.html}}"
 
