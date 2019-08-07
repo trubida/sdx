@@ -13,3 +13,5 @@
     service:
       name: httpd 
       state: started
+  - name: Run command to copy index.html
+  command: /tmp/ "curl -O https://s3.amazonaws.com/www.siriuscoffeecompany.com/index.html"
