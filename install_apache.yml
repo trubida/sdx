@@ -1,6 +1,7 @@
 ---
 - name: This sets up an httpd webserver
   hosts: tag_Name_Demo
+  gather_facts: no
   sudo: yes
   tasks:
   - name: Install apache packages 
