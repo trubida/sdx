@@ -2,10 +2,10 @@
 - name: This sets up an httpd webserver
   hosts: tag_Name_Demo
   gather_facts: no
-  use_backend: yum
   sudo: yes
   tasks:
   - name: Install apache packages 
+    use_backend: yum
     yum:
       name: httpd
       state: latest
