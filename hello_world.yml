@@ -3,7 +3,7 @@
   hosts: tag_Name_Demo
   gather_facts: no
   sudo: yes
-  tasks
+  tasks:
   - name: Simple GET operation
     s3:
       bucket: www.siriuscoffeecompany.com
