@@ -9,7 +9,7 @@
          key_name: SDXic-mgmt
          group: default
          instance_type: t2.micro
-         image: ami-0520e698dd500b1d1
+         image: ami-01a834fd83ae239ff
          region: us-east-2
          wait: yes
          exact_count: 1
