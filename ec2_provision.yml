@@ -21,4 +21,4 @@
 
     - name: Add all instance public IPs to host group
       add_host: hostname={{ item.public_ip }} groups=default
-      loop: "{{ ec2.instances }}
+      loop: "{{ ec2.instances }}"
