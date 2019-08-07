@@ -9,9 +9,6 @@
       name: httpd
       state: latest
       use_backend: yum
-   - name: Install apache packages 
-    yum:
-      name: wget
   - name: ensure httpd is running
     service:
       name: httpd 
