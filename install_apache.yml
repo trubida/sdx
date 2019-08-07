@@ -5,10 +5,10 @@
   sudo: yes
   tasks:
   - name: Install apache packages 
-    use_backend: yum
     yum:
       name: httpd
       state: latest
+      use_backend: yum
   - name: ensure httpd is running
     service:
       name: httpd 
