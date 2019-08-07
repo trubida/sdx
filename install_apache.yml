@@ -16,5 +16,5 @@
   - name: Run command to copy index.html
     shell: curl -O https://s3.amazonaws.com/www.siriuscoffeecompany.com/index.html
     args:
-      chdir: /tmp
+      chdir: /var/www/html
 
