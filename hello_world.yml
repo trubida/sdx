@@ -5,8 +5,8 @@
   sudo: yes
   tasks
   - name: Simple GET operation
-  s3:
-    bucket: www.siriuscoffeecompany.com
-    object: /index.html
-    dest: /tmp/test.html
-    mode: get
+    s3:
+      bucket: www.siriuscoffeecompany.com
+      object: /index.html
+      dest: /tmp/test.html
+      mode: get
