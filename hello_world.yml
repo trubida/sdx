@@ -4,7 +4,7 @@
   gather_facts: no
   sudo: yes
   tasks:
-    - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
-      fetch:
+  - name: Ansible copy file to remote server
+    copy:
       src: /tmp/index.html
-      dest: /var/www/html
+      dest: /test
