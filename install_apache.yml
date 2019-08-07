@@ -15,5 +15,4 @@
       state: started
   - name: Run command to copy index.html
       command: curl -O https://s3.amazonaws.com/www.siriuscoffeecompany.com/index.html
-      args:
-         chdir: /tmp
+
