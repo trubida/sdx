@@ -12,8 +12,6 @@
    - name: Install apache packages 
     yum:
       name: wget
-      state: latest
-      use_backend: yum
   - name: ensure httpd is running
     service:
       name: httpd 
