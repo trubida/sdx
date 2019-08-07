@@ -1,0 +1,12 @@
+---
+- name: Copy hello world file
+  hosts: tag_Name_Demo
+  gather_facts: no
+  sudo: yes
+  tasks
+  - name: Simple GET operation
+  s3:
+    bucket: www.siriuscoffeecompany.com
+    object: /index.html
+    dest: /tmp/test.html
+    mode: get
