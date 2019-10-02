@@ -26,7 +26,7 @@
       wait_for: timeout=200
       delegate_to: localhost
     - name: This sets up an httpd webserver
-      hosts: tag_Name_Demo
+      hosts: Demo
       gather_facts: no
       sudo: yes
       tasks:
