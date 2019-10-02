@@ -18,23 +18,9 @@
          instance_tags:
             Name: Demo
       register: ec2
-
     - name: Add all instance public IPs to host group
       add_host: hostname={{ item.public_ip }} groups=default
       loop: "{{ ec2.instances }}"
     - name: sleep for 300 seconds and continue with play
       wait_for: timeout=200
       delegate_to: localhost
-      - name: Install apache packages 
-          yum:
-            name: httpd
-            state: latest
-            use_backend: yum
-      - name: ensure httpd is running
-          service:
-            name: httpd 
-            state: started
-      - name: Run command to copy index.html
-          shell: curl -O https://s3.amazonaws.com/www.siriuscoffeecompany.com/index.html
-          args:
-            chdir: /var/www/html
