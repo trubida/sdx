@@ -1,0 +1,11 @@
+---
+- hosts: network_switches
+
+  tasks:
+    - name: Add VLAN to NXOS switches
+      nxos_vlans:
+        config:
+          - vlan_id: 2
+            name: Test-VLAN-2
+            enabled: True
+            state: active
