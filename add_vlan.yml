@@ -2,11 +2,11 @@
 - hosts: network_switches
 
   tasks:
-    - name: Ensure VLAN 2 exists with the name test-vlan-2 and is in the operational state
+    - name: Add VLAN to switch
       nxos_vlan:
-        vlan_id: 2
+        vlan_id: {{ vlan_id }}
         admin_state: up
-        name: test-vlan-2
+        name: {{ vlan_name }}
     - name: Copy running config to startup config
       nxos_command:
         commands: copy run start
