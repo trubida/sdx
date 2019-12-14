@@ -2,15 +2,8 @@
 - hosts: network_switches
 
   tasks:
-    - name: Merge provided configuration with device configuration.
-      nxos_vlans:
-        config:
-          - vlan_id: 2
-            name: test-vlan2
-            enabled: yes
-            state: active
- #   - name: Ensure VLAN 5 exists with the name test-vlan-2 and is in the operational state
-  #    nxos_vlan:
-   #     vlan_id: 2
-    #    admin_state: up
-     #   name: test-vlan-2
+    - name: Ensure VLAN 5 exists with the name test-vlan-2 and is in the operational state
+      nxos_vlan:
+        vlan_id: 2
+        admin_state: up
+        name: test-vlan-2
