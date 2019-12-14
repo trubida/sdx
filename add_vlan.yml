@@ -1,10 +1,9 @@
 ---
 - hosts: network_switches
   gather_facts: false
-  connection: local
 
   tasks:
-    - name: Ensure VLAN 50 exists with the name WEB and is in the shutdown state
+    - name: Ensure VLAN 5 exists with the name test-vlan-2 and is in the operational state
       nxos_vlan:
         vlan_id: 2
         admin_state: up
