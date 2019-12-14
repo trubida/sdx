@@ -1,6 +1,7 @@
 ---
 - hosts: network_switches
   gather_facts: false
+  connection: local
 
   tasks:
     - name: Ensure VLAN 50 exists with the name WEB and is in the shutdown state
