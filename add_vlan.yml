@@ -2,10 +2,8 @@
 - hosts: network_switches
 
   tasks:
-    - name: Add VLAN to NXOS switches
-      nxos_vlans:
-        config:
-          - vlan_id: 2
-            name: Test-VLAN-2
-            enabled: True
-            state: active
+    - name: Ensure VLAN 50 exists with the name WEB and is in the shutdown state
+      nxos_vlan:
+        vlan_id: 2
+        admin_state: up
+        name: test-vlan-2
