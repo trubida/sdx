@@ -7,6 +7,6 @@
         vlan_id: 2
         admin_state: up
         name: test-vlan-2
-    - name: run show version on remote devices
+    - name: Copy running config to startup config
       nxos_command:
         commands: copy run start
