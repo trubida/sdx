@@ -4,9 +4,9 @@
   tasks:
     - name: Add VLAN to switch
       nxos_vlan:
-        vlan_id: {{ vlan_id }}
+        vlan_id: "{{ vlan_id }}"
         admin_state: up
-        name: {{ vlan_name }}
+        name: "{{ vlan_name }}"
     - name: Copy running config to startup config
       nxos_command:
         commands: copy run start
