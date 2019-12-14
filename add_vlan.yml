@@ -7,7 +7,7 @@
         config:
           - vlan_id: 2
             name: test-vlan2
-            enable: yes
+            enabled: yes
             state: active
  #   - name: Ensure VLAN 5 exists with the name test-vlan-2 and is in the operational state
   #    nxos_vlan:
