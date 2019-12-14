@@ -1,5 +1,6 @@
 ---
 - hosts: network_switches
+  gather_facts: false
 
   tasks:
     - name: Add VLAN to switch
