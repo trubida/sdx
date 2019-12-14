@@ -2,7 +2,7 @@
 - hosts: network_switches
 
   tasks:
-    - name: Ensure VLAN 5 exists with the name test-vlan-2 and is in the operational state
+    - name: Ensure VLAN 2 exists with the name test-vlan-2 and is in the operational state
       nxos_vlan:
         vlan_id: 2
         admin_state: up
