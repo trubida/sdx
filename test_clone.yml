@@ -8,7 +8,7 @@
   # Create a VM from a template
   - name: create the VM
     vmware_guest:
-      hostname: 'lab-vcenter'
+      hostname: 'lab-vcenter.lab.mgmt.siriussdx.com'
       validate_certs: no
       datacenter: 'LAB-DC'
       folder: ansible
